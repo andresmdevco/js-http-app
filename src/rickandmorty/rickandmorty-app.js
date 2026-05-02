@@ -21,7 +21,7 @@ const fetchEpisode = async() => {
 export const RickandmortyApp = async(element) => {
     document.querySelector('#app-title').innerHTML = 'Rickandmorty App';
     element.innerHTML = 'Loading...';
-    await fetchEpisode();
+    // await fetchEpisode();
 
     const episodeNameLabel = document.createElement('blockquote');
     const episodeCodeLabel = document.createElement('h3');
@@ -34,6 +34,16 @@ export const RickandmortyApp = async(element) => {
         episodeCodeLabel.innerHTML = data.episode;
         element.replaceChildren(episodeNameLabel, episodeCodeLabel, nextEpisodeButton);
     }
+
+
+    // Añadir Listener
+    nextEpisodeButton.addEventListener('click', async() => {
+        element.innerHTML = 'Loading...';
+        const episode = await fetchEpisode();
+        renderEpisode(episode);
+
+    });
+
 
     fetchEpisode()
         .then(renderEpisode);
