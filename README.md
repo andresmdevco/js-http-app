@@ -8,7 +8,7 @@ Mini aplicación web construida con **Vite + Vanilla JS** que consume la Rick an
 - Muestra el nombre y código del episodio en pantalla
 - Permite cargar un nuevo episodio con el botón *Next Episode*
 
-## Tecnologías
+## 🛠 Tecnologías
 
 - **Vite** — bundler y servidor de desarrollo
 - **Vanilla JavaScript (ES Modules)** — sin frameworks
